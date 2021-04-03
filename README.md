@@ -1,2 +1,2 @@
-# Tutoring
-My official tutoring site!
+# Isaac Chen Tutoring
+My official tutoring website.

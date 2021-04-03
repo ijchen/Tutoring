@@ -1,0 +1,67 @@
+/* Jump to bottom button */
+#jumpToBottomBtn {
+	color: var(--color-light-2);
+	background-color: var(--color-highlight-1);
+	border: none; /* Remove default outline */
+	font-weight: bold;
+	font-size: 24px;
+	padding: 20px 40px;
+	border-radius: 50px;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+	margin: 20px auto; /* Center and add space around the button */
+	display: block; /* Allows us to center it nicely */
+	white-space: nowrap; /* In the event that the available width becomes really small, prevent wrapping the text */
+	
+	transition: background-color 0.3s, box-shadow 0.3s; /* Fancy animation */
+}
+#jumpToBottomBtn:hover {
+	box-shadow: 2px 8px 16px 0 rgba(0, 0, 0, 0.8);
+	background-color: var(--color-highlight-2);
+}
+
+/* The vertical flexbox of milestones */
+#milestones {
+	margin-bottom: var(--size-gap); /* Add some space above the bottom of the page */
+	margin-top:    var(--size-gap); /* Add some space above the first milestone */
+	gap: 100px; /* Add a decent gap between the milestones */
+}
+
+/* A milestone div */
+.milestone {
+	min-height: 300px; /* Ensure they're all at least a certain minimum height */
+}
+
+/* Milestone image or text panels */
+.imagePanel, .textPanel {
+	margin-left:  var(--size-gap); /* Add some space around */
+	margin-right: var(--size-gap); /*       the panel       */
+	flex-basis: 0; /* Start growing from 0 width (start on an even playing field) */
+}
+
+/* Milestone image and image container */
+.imagePanel {
+	position: relative; /* Since the images will have position: absolute */
+}
+.msImage {
+	width: 100%;  /*  Take up the full size  */
+	height: 100%; /*      of the parent      */
+	object-fit: contain; /* Fit the images as best we can without stretching */
+	position: absolute; /* Take the images out of the normal flow of the document */
+}
+
+/* Milestone text panel (contains all the text for a milestone) */
+.textPanel {
+	flex-grow: 2; /* Grow twice as quickly as the image panel (which has flex-grow 1 by default) */
+}
+
+/* The header for a milestone */
+.msHeader {
+	font-size: 48px;
+	margin-top: 0; /* Put it right up at the top of the parent */
+}
+
+/* The description text for a milestone */
+.msText {
+	font-size: 24px;
+	margin: 0;
+}

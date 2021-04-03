@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Isaac Chen Tutoring</title>
+	<link rel="shortcut icon" type="image/png" href="assets/images/icon.png">
+	<link rel="stylesheet" href="stylesheets/main.css">
+	<link rel="stylesheet" href="stylesheets/Home.css">
+	
+	<title>Isaac Chen Tutoring</title>
+</head>
+<body>
+	<!-- All of the content on the page is laid out in a vertical flexbox, top to bottom -->
+	<div class="flexVert">
+		<!-- The header across the top, with the logo and navbar -->
+		<div id="header" class="flexHorz">
+			<!-- The clickable logo in the top left -->
+			<div id="logo">
+				<a id="logoLink" href="home">
+					<img id="logoImg" alt="Isaac Chen Tutoring" src="assets/images/logo.png">
+				</a>
+			</div>
+			
+			<!-- The navigation bar -->
+			<div id="navbar">
+				<a class="navbarLink currentPage" href="home">Home</a>
+				<a class="navbarLink" href="journey">My Journey</a>
+				<a class="navbarLink" href="pricing">Pricing</a>
+				<a class="navbarLink" href="policies">Policies</a>
+				<a class="navbarLink" href="contact">Contact Me</a>
+			</div>
+		</div>
+		
+		<!-- The main content of the web page -->
+		<div id="content" class="flexHorz">
+			<!-- The main text panel, to the left of the image. Contains the header, text, and CTA button -->
+			<div id="textPanel">
+				<h1 id="helloHeader" class="bigHeader">
+					Hello! My name is <span class="highlight">Isaac Chen</span>.
+				</h1>
+				
+				<p>Computer scientist, tutor, learning enthusiast, <span id="catLoverText"><span id="catLoverImageContainer"></span>cat-lover</span>.</p>
+				
+				<p>
+					Computer science is my passion. I've been building my programming
+					skills <span id="experienceText">since early 2016</span>, and
+					have developed a deep understanding of the field. Throughout my
+					years tutoring both privately and professionally, I've learned
+					to identify student learning styles and explain concepts in an
+					easy to digest way. My goal as your tutor is to guide you through
+					your learning and foster a strong and complete understanding of
+					the subject.
+				</p>
+				
+				<!-- The "CONTACT ME" call to action button -->
+				<a href="contact" id="callToActionBtn">CONTACT ME</a>
+			</div>
+			
+			<!-- Hey look, it's me! -->
+			<div id="imagePanel">
+				<img id="meImg" alt="Isaac Chen" src="assets/images/Home/me.jpg">
+			</div>
+		</div>
+	</div>
+	
+	<script src="scripts/Home.js"></script>
+</body>
+</html>

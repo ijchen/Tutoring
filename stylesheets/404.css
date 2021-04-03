@@ -1,0 +1,27 @@
+/* The 404 text */
+#errorText {
+	text-align: center;
+	font-size: 24px;
+}
+
+/* The "TAKE ME HOME" button */
+#takeMeHomeBtn {
+	text-decoration: none; /* Remove the underline */
+	font-weight: bold;
+	color: var(--color-light-2);
+	background-color: var(--color-highlight-1); /* Really make it *POP* :) */
+	font-size: 32px;
+	border-radius: 50px; /* A nice radius */
+	padding: 20px 40px; /* Give it some bulk */
+	white-space: nowrap; /* In the event that the available width becomes really small, prevent wrapping the text */
+	
+	display: table; /* Allows us to center the link with margin: auto */
+	margin: auto; /* Center the link */
+	
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+#takeMeHomeBtn:hover {
+	box-shadow: 2px 8px 16px 0 rgba(0, 0, 0, 0.8);
+	background-color: var(--color-highlight-2);
+}

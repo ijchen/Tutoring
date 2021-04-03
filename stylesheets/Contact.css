@@ -1,0 +1,40 @@
+/* Animations for the main list of contact methods */
+/* Schedule the contactPanels fading in (could be done w/ JS if we had more panels) */
+#contactList :nth-child(1) { animation-delay:  400ms; }
+#contactList :nth-child(2) { animation-delay:  600ms; }
+#contactList :nth-child(3) { animation-delay:  800ms; }
+#contactList :nth-child(4) { animation-delay: 1000ms; }
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to   { opacity: 100%; }
+}
+
+/* One panel of contact information */
+.contactPanel {
+	margin: 0 auto; /* Center the contact panels */
+	background-color: var(--color-dark-1);
+	padding: 16px 24px; /* Some nice breathing room */
+	min-width: 500px; /* Give them all a minimum width */
+	flex-grow: 0; /* Prevents the contact panels from expanding vertically to fill the page */
+	width: auto; /* Cancel the width: 100% which was inherited from flexHorz */
+	
+	animation: fadeIn 500ms forwards; /* Fade in after 500ms, and stay visible after */
+	opacity: 0; /* Start completely invisible */
+}
+.contactPanel > * {
+	flex-grow: 0; /* Prevent the children of the contact panel from flex-growing (inherited growing by default from .flexHorz) */
+}
+
+/* The logo/icon in each contact panel */
+.contactIcon {
+	width:  50px; /*     Resize the images     */
+	height: 50px; /*      to 50x50 pixels      */
+	object-fit: contain; /* If the images aren't 1:1, fit them as best we can w/o stretching */
+}
+
+/* The text in each contact panel */
+.contactText {
+	color: var(--color-light-2);
+	font-size: 32px;
+	margin: 0; /* Spacing is taken care of in .contactPanel */
+}

@@ -1,0 +1,40 @@
+/* The detail text */
+#priceText {
+	font-size: 24px;
+	margin: auto; /* Center the paragraph (not the lines of text themselves) */
+	text-align: justify; /* Justify the text, newspaper style */
+	max-width: 700px; /* About the size of the table (not exact, but close enough) */
+}
+
+/* The cute little hand-shaking agreement logo */
+#handshakeImg {
+	width:  128px; /* The image is already 128x128, but these should */
+	height: 128px; /*   help keep things neat if that ever changes   */
+	
+	display: block; /* Allow us to use margin: auto to center */
+	margin: auto; /* Center the image */
+	
+	object-fit: contain; /* Technically shouldn't matter, but in case the image is ever not 128x128 */
+}
+
+/* The table of prices */
+#priceTable {
+	text-align: center;
+	font-size: 24px;
+	border-spacing: 0; /* Put all the cells right up next to each other */
+	color: var(--color-dark-1);
+	margin: 0 auto var(--size-gap) auto; /* Include the gap on the bottom if the page gets very tall */
+}
+#priceTable,
+#priceTable th,
+#priceTable td {
+	border: 1px solid var(--color-dark-1);
+}
+#priceTable th, #priceTable td {
+	padding: 10px 40px; /* Get some breathing room in the table */
+	min-width: 150px; /* Give all the columns a minimum width */
+}
+#priceTable th {
+	background-color: var(--color-dark-1); /* Make the table headers stand out */
+	color: var(--color-light-1); /* Light on dark */
+}

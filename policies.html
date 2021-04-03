@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Isaac Chen Tutoring</title>
+	<link rel="shortcut icon" type="image/png" href="assets/images/icon.png">
+	<link rel="stylesheet" href="stylesheets/main.css">
+	<link rel="stylesheet" href="stylesheets/Policies.css">
+</head>
+<body>
+	<!-- All of the content on the page is laid out in a vertical flexbox, top to bottom -->
+	<div class="flexVert">
+		<!-- The header across the top, with the logo and navbar -->
+		<div id="header" class="flexHorz">
+			<!-- The clickable logo in the top left -->
+			<div id="logo">
+				<a id="logoLink" href="home">
+					<img id="logoImg" alt="Isaac Chen Tutoring" src="assets/images/logo.png">
+				</a>
+			</div>
+			
+			<!-- The navigation bar -->
+			<div id="navbar">
+				<a class="navbarLink" href="home">Home</a>
+				<a class="navbarLink" href="journey">My Journey</a>
+				<a class="navbarLink" href="pricing">Pricing</a>
+				<a class="navbarLink currentPage" href="policies">Policies</a>
+				<a class="navbarLink" href="contact">Contact Me</a>
+			</div>
+		</div>
+		
+		<!-- The main content of the web page -->
+		<h1 class="bigHeader">Policies</h1>
+		<div id="policies" class="flexVert">
+			<!-- COVID-19 -->
+			<div class="policyCategory collapsibleParent">
+				<div class="policyHeader collapsibleToggle">COVID-19</div>
+				<div class="policyList collapsible">
+					<!-- In-person sessions -->
+					<div>
+						<h2 class="policyTitle">In-person sessions</h2>
+						<p class="policyText">
+							Due to the ongoing global pandemic, I do not
+							currently offer in-person sessions. All sessions
+							will be held virtually.
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Scheduling -->
+			<div class="policyCategory collapsibleParent">
+				<div class="policyHeader collapsibleToggle">Scheduling</div>
+				<div class="policyList collapsible">
+					<!-- Availability -->
+					<div>
+						<h2 class="policyTitle">Availability</h2>
+						<p class="policyText">
+							I am available throughout the week and weekend,
+							although my specific availability varies.
+							<a href="contact">Reach out</a>
+							to me and we can work together to find a time that
+							works for you.
+						</p>
+					</div>
+					
+					<!-- Recurring sessions -->
+					<div>
+						<h2 class="policyTitle">Recurring sessions</h2>
+						<p class="policyText">
+							You can schedule either one-time meetings or
+							regularly scheduled sessions - whatever floats your
+							boat!
+						</p>
+					</div>
+					
+					<!-- How we meet -->
+					<div>
+						<h2 class="policyTitle">How we meet</h2>
+						<p class="policyText">
+							I am flexible with how we meet. I've used many
+							platforms, including Zoom, Skype, Discord, WebEx,
+							and even just a phone call. We can use whatever
+							you're most comfortable with, except FaceTime - I'm
+							on Android!
+						</p>
+					</div>
+					
+					<!-- Late policy -->
+					<div>
+						<h2 class="policyTitle">Late policy</h2>
+						<p class="policyText">
+							Life is full of surprises, I completely understand
+							that. If you're running late, I'm happy to wait as
+							long as you need until you arrive, but the meeting
+							will still end as scheduled. I cannot add "extra
+							time" at the end of a session to make up for missed
+							time at the start.
+						</p>
+					</div>
+					
+					<!-- Cancellation policy -->
+					<div>
+						<h2 class="policyTitle">Cancellation policy</h2>
+						<p class="policyText">
+							If you need to cancel or reschedule an appointment,
+							that's no problem. You may cancel or reschedule at
+							no penalty up to 24 hours before the start of an
+							appointment. After 24 hours, I will charge for the
+							full amount of the session out of respect for both
+							my time and other students who may have scheduled
+							an appointment then.
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Ethics -->
+			<div class="policyCategory collapsibleParent">
+				<div class="policyHeader collapsibleToggle">Ethics</div>
+				<div class="policyList collapsible">
+					<!-- Academic integrity -->
+					<div>
+						<h2 class="policyTitle">Academic integrity</h2>
+						<p class="policyText">
+							As a tutor, it is my job to aid and strengthen your
+							education - not to undermine it. To that extent, I
+							will abide by both your school's and your class's
+							academic integrity policies to the letter. I am
+							<em>entirely unwilling</em> to help you cheat.
+							Please look elsewhere if your goal is to find
+							someone to just take your exams for you.
+						</p>
+					</div>
+					
+					<!-- Respect -->
+					<div>
+						<h2 class="policyTitle">Respect</h2>
+						<p class="policyText">
+							This one's pretty simple. I will treat you with the
+							respect and kindness you deserve, and I ask that you
+							do the same for me. Life is so much better when we're
+							all nice to each other :)
+						</p>
+					</div>
+					
+					<!-- Statement of non-discrimination -->
+					<div>
+						<h2 class="policyTitle">Statement of non-discrimination</h2>
+						<p class="policyText">
+							I'm happy to be your tutor, no matter your background,
+							age, or level of experience. I do not discriminate on
+							the basis of race, color, religion, gender identity,
+							age, national origin, disability, marital status,
+							sexual orientation, or military status. We're all
+							human, and we all deserve respect.
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- My services -->
+			<div class="policyCategory collapsibleParent">
+				<div class="policyHeader collapsibleToggle">My services</div>
+				<div class="policyList collapsible">
+					<!-- What I provide -->
+					<div>
+						<h2 class="policyTitle">What I provide</h2>
+						<div class="policyText">
+							<p>
+								As your tutor, there are some things that are,
+								and others that are not part of my job. For
+								example, it is <em>not</em> my job to:
+							</p>
+							<ul>
+								<li>
+									Do your homework for you, although I'm happy
+									to walk through similar problems with you
+								</li>
+								<li>
+									Promise you a certain grade, although I will
+									give you the tools you need to get there
+								</li>
+								<li>
+									Keep track of your assignments for you,
+									although I have many great tips for
+									time-management and organization
+								</li>
+							</ul>
+							<p>
+								It <em>is</em> my job to:
+							</p>
+							<ul>
+								<li>
+									Break down and explain concepts in a clear,
+									understandable way
+								</li>
+								<li>
+									Encourage you and help you feel confident
+									in your understanding
+								</li>
+								<li>
+									Effectively and completely answer your questions
+								</li>
+								<li>
+									Help you figure out material you've been
+									struggling with
+								</li>
+								<li>
+									Treat you with respect, kindness, and dignity
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- I am human -->
+					<div>
+						<h2 class="policyTitle">I am human</h2>
+						<p class="policyText">
+							Though I am very knowledgeable about math and
+							computer science, there's always more to learn.
+							There may be times when I don't know the answer to
+							your question, or I make a mistake. I'm only human!
+							My promise to you is that I will use these
+							situations as an opportunity to model how to
+							overcome academic challenges, and ensure we both
+							come out with a better understanding.
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Payment -->
+			<div class="policyCategory collapsibleParent">
+				<div class="policyHeader collapsibleToggle">Payment</div>
+				<div class="policyList collapsible">
+					<!-- Time of payment -->
+					<div>
+						<h2 class="policyTitle">Time of payment</h2>
+						<p class="policyText">
+							Payment is expected within 2 days of an appointment.
+							You do not have to, but are welcome to pay in advance.
+						</p>
+					</div>
+					
+					<!-- Method of payment -->
+					<div>
+						<h2 class="policyTitle">Method of payment</h2>
+						<p class="policyText">
+							I accept <a href="https://paypal.me/isaacjchen" target="_blank">PayPal</a>,
+							<a href="https://cash.app/$isaacjchen1" target="_blank">CashApp</a>,
+							<a href="https://venmo.com/isaacjchen" target="_blank">Venmo</a>,
+							or cash (once in-person sessions resume). Please
+							include a message that makes it clear the payment
+							is for a tutoring session, and include the date of
+							the session.
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Privacy -->
+			<div class="policyCategory collapsibleParent">
+				<div class="policyHeader collapsibleToggle">Privacy</div>
+				<div class="policyList collapsible">
+					<!-- Contact information -->
+					<div>
+						<h2 class="policyTitle">Contact information</h2>
+						<p class="policyText">
+							As a part of our tutor-student relationship, I will
+							ask you for the best way to contact you. Any contact
+							information you choose to provide, as well as your
+							personal information, will be kept private and not
+							shared with anyone.
+						</p>
+					</div>
+					
+					<!-- Recording sessions -->
+					<div>
+						<h2 class="policyTitle">Recording sessions</h2>
+						<p class="policyText">
+							I am okay with you recording audio and/or video of
+							our sessions for personal use, under the condition
+							that all recordings be kept private and are not
+							used outside of your own personal review and study.
+							I also ask that you give me a quick heads-up that
+							you will be recording.
+						</p>
+					</div>
+					
+					<!-- Confidentiality -->
+					<div>
+						<h2 class="policyTitle">Confidentiality</h2>
+						<div class="policyText">
+							<p>
+								As part of our tutor-student relationship, I will
+								treat everything we discuss during our sessions as
+								confidential, and will not share anything except in
+								the following very unusual circumstances:
+							</p>
+							<ul>
+								<li>
+									I am required by law to provide confidential
+									information
+								</li>
+								<li>
+									I feel that by sharing confidential
+									information, I might prevent you or others
+									from serious and imminent harm
+								</li>
+								<li>
+									I have requested and obtained explicit
+									permission from you
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="scripts/Policies.js"></script>
+	<!-- Fallback in case Javascript is disabled -->
+	<noscript>
+		<!-- Open all policy categories -->
+		<style type="text/css">
+			/* A list of policies under a certain category */
+			.policyList {
+				border-bottom-width: 5px;
+			}
+			
+			/* Some collapsible content (should be a child of a .collapsibleParent) */
+			.collapsible {
+				max-height: unset;
+			}
+		</style>
+	</noscript>
+</body>
+</html>

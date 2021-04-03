@@ -1,0 +1,152 @@
+/* TODO Sweep through entire file cleaning up commented out stuff */
+/* lol except obviously comments */
+
+/* * * * * * * * * *
+ * Root variables  *
+ * * * * * * * * * */
+
+:root {
+	/* Color variables */
+	--color-light-1:     #FCF2DE;
+	--color-light-2:     #FFFFFF;
+	--color-dark-1:      #121619;
+	--color-dark-2:      #0B0D0F;
+	--color-highlight-1: #B41825;
+	--color-highlight-2: #C51B29;
+	
+	/* Size variables */
+	--size-gap: 50px;
+}
+
+/* * * * * * * * *
+ * Body defaults *
+ * * * * * * * * */
+
+body {
+	background-color: var(--color-light-1);
+	color: var(--color-dark-1);
+	margin: 0;
+	font-family: "Dubai", "Helvetica", "Arial", sans-serif;
+}
+
+/* * * * * * * * * *
+ * Default classes *
+ * * * * * * * * * */
+
+/* Main headers */
+.bigHeader {
+	font-size: 72px;
+	margin: 0;
+	text-align: center;
+}
+
+/* Highlighted elements */
+.highlight {
+	color: var(--color-highlight-1);
+	text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Flexbox defaults */
+.flexVert {
+	height: 100%;
+	display: flex; /* ... obviously :P */
+	flex-direction: column; /* Specifies that elements are placed top-to-bottom */
+	gap: var(--size-gap); /* The gap between the elements in the column */
+}
+.flexVert > * {
+	flex: 1 1 auto; /* Child elements will, by default, grow and shrink with a weight of 1 and a flex-basis of auto */
+}
+
+.flexHorz {
+	width: 100%;
+	display: flex; /* ... obviously :P */
+	flex-direction: row; /* Specifies that elements are placed left-to-right */
+	gap: var(--size-gap); /* The gap between the elements in the row */
+}
+.flexHorz > * {
+	flex: 1 1 auto; /* Child elements will, by default, grow and shrink with a weight of 1 and a flex-basis of auto */
+}
+
+/* * * * * *
+ * Header  *
+ * * * * * */
+
+/* Header */
+#header {
+	background-color: var(--color-dark-1);
+	height: 125px; /* 125px on desktop, although this is modified by @media selectors */
+	flex-grow: 0; /* The navbar shouldn't grow in height */
+}
+
+/* The logo in the top right */
+#logo {
+	background-color: var(--color-dark-1); /* Would be inherited from #header anyway, but I want to specify it */
+	flex-grow: 0;   /* Prevent the logo from growing ... */
+	flex-shrink: 0; /*                  ... or shrinking */
+	width: 250px; /* The width should always be 250px */
+	height: 100%; /* Take up the full height of the header */
+}
+#logoLink {
+	width:  100%; /* Ensure the link takes up the entire parent div */
+	height: 100%; /* Ensure the link takes up the entire parent div */
+	display: inline-block; /* Allows us to set the width and height */
+}
+#logoImg {
+	display: block; /* Make the image a block so we can center it with margin: auto */
+	margin: auto; /* Center the image (relies on display: block) */
+	max-width:  100%; /* Ensure the image fits within the parent */
+	max-height: 100%; /* Not using width/height because they will stretch the image */
+}
+
+/* * * * * * * * * *
+ * Navigation bar  *
+ * * * * * * * * * */
+
+/* The div containing a bunch of links */
+#navbar {
+	display: flex; /* flex display */
+	justify-content: flex-end; /* Left align the links */
+	align-items: center; /* Center the links vertically */
+}
+/* Navbar links (a elements in the navbar) */
+.navbarLink {
+	font-size: 32px;
+	color: var(--color-light-2);
+	background-color: var(--color-dark-1); /* Would be inherited from #header anyway, but I want to specify it */
+	padding: 8px 40px 8px 40px; /* Inflate the links a bit to make them like buttons */
+	margin-right: 30px; /* Space the links out (including the rightmost from the right edge of the window) */
+	text-decoration: none; /* Remove the underlines */
+	transition: background-color 0.3s; /* Fade in hover color */
+}
+/* Navbar links on hover */
+.navbarLink:hover {
+	background-color: var(--color-dark-2); /* Darken slightly. Animated from .navbarLink */
+}
+/* The link for the current page */
+.navbarLink.currentPage {
+	text-decoration: underline;
+}
+
+/* * * * * * * * * * * *
+ * Responsive changes  *
+ * * * * * * * * * * * */
+
+/* Small screens */
+@media only screen and (max-width: 1649px) {
+	/* Shrink the links in the navbar */
+	.navbarLink {
+		font-size: 32px;
+		padding: 8px 20px 8px 20px; /* Inflate the links a bit to make them like buttons */
+		margin-right: 20px; /* Space the links out (including the rightmost from the right edge of the window) */
+	}
+}
+
+/* Tiny screens */
+@media only screen and (max-width: 1199px) {
+	/* Shrink the links in the navbar */
+	.navbarLink {
+		font-size: 24px;
+		padding: 4px 10px 4px 10px; /* Inflate the links a bit to make them like buttons */
+		margin-right: 10px; /* Space the links out (including the rightmost from the right edge of the window) */
+	}
+}

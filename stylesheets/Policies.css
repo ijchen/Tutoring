@@ -1,0 +1,56 @@
+/* The entire list of policy categories (container for the policy categories) */
+#policies {
+	margin-bottom: var(--size-gap); /* Add a gap at the bottom of the page */
+}
+
+/* A policy category. Contains the header AND the text */
+.policyCategory {
+	margin: 0 var(--size-gap); /* Add some space on the left and right */
+}
+
+/* A policy header (The big "Scheduling" or "Ethics") */
+.policyHeader {
+	color: var(--color-light-1);
+	background-color: var(--color-dark-1);
+	font-size: 32px;
+	font-weight: bold;
+	margin: 0;
+	padding: 16px 32px;
+}
+
+/* A clickable element to collapse or expand collapsible content */
+.collapsibleToggle {
+	cursor: pointer; /* Visual indicator that the element is clickable */
+	user-select: none; /* Don't allow the user to select the text (prevents annoyingly selecting it when accidentally dragging the mouse) */
+	tab-index: 0; /* For accessibility. Allows users to focus the collapsibles with the keyboard */
+}
+
+/* A list of policies under a certain category */
+.policyList {
+	border: 5px solid var(--color-dark-1); /* Have a nice border around the content */
+	border-top: none; /* No border on top (the policy category header will be there) */
+	border-bottom-width: 0; /* No bottom border by default. Modified by JS when toggled */
+}
+
+/* Some collapsible content (should be a child of a .collapsibleParent) */
+.collapsible {
+	max-height: 0; /* This, and the transition animation, are set by JS */
+	overflow: hidden; /* Don't let collapsed content overflow */
+	padding: 0 16px;
+}
+
+.policyTitle {
+	margin-bottom: 0; /* Put it right up against the text below */
+	text-decoration: underline;
+}
+
+/* The actual text of a policy. Can also be a container with text and more */
+.policyText {
+	font-size: 24px;
+	margin-top: 0; /* No margin at the top */
+	margin-bottom: 24px; /* Add a margin at the bottom (especially matters when it isn't a <p> element) */
+}
+.policyText * {
+	margin-top: 0;    /* Hide margins for children .policyText elements (policyText can be a div with text and others inside) */
+	margin-bottom: 0; /* Hide margins for children .policyText elements (policyText can be a div with text and others inside) */
+}

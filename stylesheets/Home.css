@@ -1,0 +1,121 @@
+/* * * * * * * * * * * * * * * * *
+ * The main content of the page  *
+ * * * * * * * * * * * * * * * * */
+
+#content {
+	margin-bottom: var(--size-gap);
+}
+
+/* Both the image and the text panel */
+#imagePanel, #textPanel {
+	flex-basis: 0; /* Start growing from 0 width (start on an even playing field) */
+}
+
+/* * * * * * * *
+ * Text panel  *
+ * * * * * * * */
+
+/* The main text panel, to the left of the image. Contains the header, text, and CTA button */
+#textPanel {
+	margin-left: var(--size-gap); /* Move it in from the left of the screen */
+	font-size: 24px;
+	flex-grow: 5; /* Growth rate relative to the image panel */
+}
+
+/* The "Hello! My name is Isaac Chen." header */
+#helloHeader {
+	margin: var(--size-gap) 0; /* Most of this is taken care of by .bigHeader, except I want a margin */
+}
+
+/* The "cat-lover" popup business */
+#catLoverText {
+	position: relative; /* So we can use position: absolute on the child image */
+	text-decoration: underline; /* Give the user a little hint that they can hover */
+}
+#catLoverText:hover {
+	color: var(--color-highlight-1);
+}
+.catLoverImage {
+	/* Size & appearance */
+	max-width: 800px;  /* Enforce a maximum size for the image */
+	max-height: 350px; /* Fit both a max width and max height   */
+	background-color: var(--color-dark-1); /* Just in case, since transform can be odd */
+	box-shadow: 0 0 7px var(--color-dark-1); /* Make the image stand out */
+	
+	/* Positioning */
+	position: absolute; /* Take it out of the natural flow of the document */
+	top: -10px; /* Put it 10 pixels above the top of the text */
+	left: 50%; /* Center it relative to the text */
+	transform: translate(-50%, -100%); /* Translate relative to it's own size */
+	
+	/* Hover transform defaults */
+	transition: opacity 100ms ease; /* Make it fade in smoothly */
+	pointer-events: none; /* Prevent hovering over the image itself from updating the image */
+}
+
+/* Call-to-action button */
+#callToActionBtn {
+	text-decoration: none; /* Remove the underline */
+	font-weight: bold;
+	color: var(--color-light-2);
+	background-color: var(--color-highlight-1); /* Really make it *POP* :) */
+	font-size: 32px;
+	border-radius: 50px; /* A nice radius */
+	padding: 20px 40px; /* Give it some bulk */
+	white-space: nowrap; /* In the event that the available width becomes really small, prevent wrapping the text */
+	
+	display: table; /* Allows us to center the link with margin: auto */
+	margin: 80px auto var(--size-gap) auto; /* Center and add space around the link */
+	
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+#callToActionBtn:hover {
+	box-shadow: 2px 8px 16px 0 rgba(0, 0, 0, 0.8);
+	background-color: var(--color-highlight-2);
+}
+
+/* * * * * * * *
+ * Image panel *
+ * * * * * * * */
+
+/* The image of me and its container */
+#imagePanel {
+	margin-right: var(--size-gap); /* Put some space between the panel and the right side of the screen */
+	flex-grow: 2; /* Growth rate relative to the text panel */
+}
+#meImg {
+	width: 100%;  /*  Take up the full size  */
+	height: 100%; /*      of the parent      */
+	object-fit: contain; /* Fit the images as best we can without stretching */
+}
+
+/* * * * * * * * * * * *
+ * Responsive changes  *
+ * * * * * * * * * * * */
+
+/* Small screens */
+@media only screen and (max-width: 1649px) {
+	/* Shrink the header font size */
+	#helloHeader {
+		font-size: 52px;
+	}
+}
+
+/* Tiny screens */
+@media only screen and (max-width: 1199px) {
+	/* Restore the header font size, since we're hiding the image */
+	#helloHeader {
+		font-size: 70px;
+	}
+	
+	/* Hide the image of me */
+	#imagePanel {
+		display: none;
+	}
+	
+	/* Text panel now doesn't have an image panel next to it... add a margin! */
+	#textPanel {
+		margin-right: var(--size-gap);
+	}
+}
