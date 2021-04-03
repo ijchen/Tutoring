@@ -51,9 +51,5 @@ for(let elem of document.getElementsByClassName("collapsibleParent")) {
 		toggle.addEventListener("keydown", e => {
 			if(e.key === "Enter" || e.key === " ") e.target.click();
 		});
-		
-		// TODO Temp
-		// toggle.click();
-		// toggle.click();
 	}
 }
