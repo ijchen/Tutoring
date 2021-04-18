@@ -18,6 +18,16 @@ for(let elem of document.getElementsByClassName("collapsibleParent")) {
 		}
 	}
 	
+	// Get a list of collapsibleIcon children
+	let iconChildren = [];
+	for(let toggleChild of toggleChildren) {
+		for(let child of toggleChild.children) {
+			if(child.classList.contains("collapsibleIcon")) {
+				iconChildren.push(child);
+			}
+		}
+	}
+	
 	// Add functionality to the toggle children
 	for(let toggle of toggleChildren) {
 		// Allow users to use the keyboard to focus the toggle
@@ -25,6 +35,7 @@ for(let elem of document.getElementsByClassName("collapsibleParent")) {
 		
 		// Add a click event to show or hide the content (any collapsible children)
 		toggle.addEventListener("click", e => {
+			// Show/hide the collapsible children
 			for(let child of collapsibleChildren) {
 				if(collapsed) {
 					child.style.transition = "max-height 250ms ease-out, border-bottom 0ms ease-out 0ms";
@@ -34,6 +45,19 @@ for(let elem of document.getElementsByClassName("collapsibleParent")) {
 					child.style.transition = "max-height 250ms ease-in, border-bottom 0ms ease-in 265ms";
 					child.style.borderBottomWidth = "0";
 					child.style.maxHeight = "0";
+				}
+			}
+			
+			// Rotate the collapsible icon
+			for(let child of iconChildren) {
+				if(collapsed) {
+					child.style.transition = "transform 250ms ease-out";
+					child.style.transform = "rotateX(180deg)";
+					// child.style.transform = "rotateZ(180deg)";
+				} else {
+					child.style.transition = "transform 250ms ease-in";
+					child.style.transform = "rotateX(0deg)";
+					// child.style.transform = "rotateZ(0deg)";
 				}
 			}
 			

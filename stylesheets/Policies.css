@@ -25,6 +25,12 @@
 	tab-index: 0; /* For accessibility. Allows users to focus the collapsibles with the keyboard */
 }
 
+.collapsibleIcon {
+	width: 50px; /* Fix them to a consistent width */
+	float: right; /* Take them out of the natural document flow, and float them right */
+	transform: rotate(0deg); /* Default rotation (not rotated) */
+}
+
 /* A list of policies under a certain category */
 .policyList {
 	border: 5px solid var(--color-dark-1); /* Have a nice border around the content */
