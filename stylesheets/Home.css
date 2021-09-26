@@ -30,7 +30,7 @@
 /* The "cat-lover" popup business */
 #catLoverText {
 	position: relative; /* So we can use position: absolute on the child image */
-	text-decoration: underline; /* Give the user a little hint that they can hover */
+	text-decoration: underline dotted; /* Give the user a little hint that they can hover */
 }
 #catLoverText:hover {
 	color: var(--color-highlight-1);
