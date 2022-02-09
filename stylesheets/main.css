@@ -75,7 +75,7 @@ body {
 	flex-grow: 0; /* The navbar shouldn't grow in height */
 }
 
-/* The logo in the top right */
+/* The logo in the top left */
 #logo {
 	background-color: var(--color-dark-1); /* Would be inherited from #header anyway, but I want to specify it */
 	flex-grow: 0;   /* Prevent the logo from growing ... */
