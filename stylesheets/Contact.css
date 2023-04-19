@@ -14,7 +14,7 @@
 	margin: 0 auto; /* Center the contact panels */
 	background-color: var(--color-dark-1);
 	padding: 16px 24px; /* Some nice breathing room */
-	min-width: 500px; /* Give them all a minimum width */
+	min-width: 600px; /* Give them all a minimum width */
 	flex-grow: 0; /* Prevents the contact panels from expanding vertically to fill the page */
 	width: auto; /* Cancel the width: 100% which was inherited from flexHorz */
 	

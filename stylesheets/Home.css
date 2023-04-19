@@ -11,6 +11,11 @@
 	flex-basis: 0; /* Start growing from 0 width (start on an even playing field) */
 }
 
+.emphasized {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
 /* * * * * * * *
  * Text panel  *
  * * * * * * * */

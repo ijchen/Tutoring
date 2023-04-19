@@ -37,6 +37,13 @@ body {
 	text-align: center;
 }
 
+/* Smaller headers */
+.smallHeader {
+	font-size: 36px;
+	margin: 0;
+	text-align: center;
+}
+
 /* Highlighted elements */
 .highlight {
 	color: var(--color-highlight-1);
